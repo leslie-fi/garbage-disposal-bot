@@ -1,0 +1,21 @@
+{
+  "name": "garbage-disposal-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@justalk/pornhub-api": "^3.3.0",
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.13.0",
+    "fs": "0.0.1-security",
+    "pornsearch": "^2.4.3",
+    "random-puppy": "^1.1.0"
+  }
+}
