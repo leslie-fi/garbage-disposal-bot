@@ -2,7 +2,7 @@ require('dotenv').config()
 const {Client, MessageEmbed, Message} = require('discord.js');
 const Pornhub = require('@justalk/pornhub-api');
 // const { GoogleApis } = require('googleapis');
-const DISCORD_API_TOKEN = 'Rs5k-yn0lJ3ymKxt3T_hxdr33pHonUmG'
+const {DISCORD_TOKEN, prefix: DISCORD_API_PREFIX} = process.env
 const DISCORD_API_PREFIX = process.env.prefix
 const client = new Client();
 
@@ -84,7 +84,7 @@ client.on('message', message =>{
 
 }, false);
 
-client.login("Nzc1MTQwNzg3NDE4NjkzNjQy.X6iAHQ.VugYwhY2plznQMHmSJ-n5BXhONQ");
+client.login(DISCORD_TOKEN);
 
 /*function test_youtube(searched){
 	gapi.client.init(
