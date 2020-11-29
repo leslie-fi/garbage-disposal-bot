@@ -1,0 +1,7 @@
+{
+    "discord.lowerDetailsEditing": "{gitreponame}",
+    "discord.lowerDetailsNotFound": "Filesize: {filesize}",
+    "discord.workspaceElapsedTime": true,
+    "discord.detailsEditing": "Editing {fulldirname}",
+    "discord.enabled": true
+}
