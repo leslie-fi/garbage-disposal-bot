@@ -1,4 +1,4 @@
-const {sendGif} =  require('../utils/pornhubApi')
+const { sendGif } = require("../utils/pornhubApi");
 module.exports = {
   name: "pornhub gif",
   aliases: ["ph-gif"],
@@ -7,16 +7,14 @@ module.exports = {
   cooldown: 4,
 
   execute: async (message, client, args) => {
-    let search;
-if (message.content.length > 9){
-		search = message.content.slice(8);
-	} else {
-        search = 'fetish'
-    }
-	if (search.length >= 1){
-		sendGif(message, search);
-	}else{
-        message.reply('parametres de recherche manquants');
+    let query = args.length > 1 ? args.join(" ") : args[0];
+    let search = !query ? "femdom" : query;
+
+    if (search.length >= 1) {
+      console.log({ search });
+      sendGif(message, search);
+    } else {
+      message.reply("parametres de recherche manquants");
     }
   },
 };

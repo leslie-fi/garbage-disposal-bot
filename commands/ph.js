@@ -1,4 +1,4 @@
-const {sendEmbed} =  require('../utils/pornhubApi')
+const { sendEmbed } = require("../utils/pornhubApi");
 module.exports = {
   name: "pornhub video",
   aliases: ["ph"],
@@ -7,16 +7,14 @@ module.exports = {
   cooldown: 4,
 
   execute: async (message, client, args) => {
-    let search;
-	if (message.content.length > 5){
-	  search = message.content.slice(4);
-	} else {
-        search = 'fetish'
+    let query = args.length > 1 ? args.join(" ") : args[0];
+    let search = !query ? "taboo" : query;
+
+    if (search.length >= 1) {
+      console.log({ search });
+      sendEmbed(message, search);
+    } else {
+      message.reply("parametres de recherche manquants");
     }
-	if (search.length >= 1){
-		sendEmbed(message, search);
-	}else{
-      message.reply('parametres de recherche manquants');
-        }
   },
 };
